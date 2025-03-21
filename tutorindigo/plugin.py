@@ -104,6 +104,7 @@ hooks.Filters.CONFIG_UNIQUE.add_items(
 hooks.Filters.CONFIG_OVERRIDES.add_items(list(config["overrides"].items()))
 
 
+
 #  MFEs that are styled using Indigo
 indigo_styled_mfes = [
     "learning",
@@ -121,19 +122,30 @@ hooks.Filters.ENV_PATCHES.add_items(
            
 RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
 RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.2.2'
-RUN npm install '@edx/brand@npm:@edly-io/indigo-brand-openedx@^2.2.2'
-
+RUN npm install '@edx/brand@git+https://github.com/wgu-mvp/brand-openedx.git#wgu-theme'
 """,
         )
         for mfe in indigo_styled_mfes
     ]
 )
 
+# RUN npm install '@edx/brand@npm:@edly-io/indigo-brand-openedx@^2.2.2'
+
+# 
+
+# hooks.Filters.ENV_PATCHES.add_item((
+#             "mfe-dockerfile-post-npm-install",
+#             """
+# RUN npm install '@edx/brand@git+https://github.com/wgu-mvp/brand-openedx.git#wgu-theme'
+# """,
+# ))
+
 
 hooks.Filters.ENV_PATCHES.add_item(
     (
         "mfe-dockerfile-post-npm-install-authn",
-        "RUN npm install '@edx/brand@npm:@edly-io/indigo-brand-openedx@^2.2.2'",
+        # "RUN npm install '@edx/brand@npm:@edly-io/indigo-brand-openedx@^2.2.2'",
+        "RUN npm install '@edx/brand@git+https://github.com/wgu-mvp/brand-openedx.git#wgu-theme'"
     )
 )
 
