@@ -24,10 +24,72 @@ from openedx.core.djangolib.markup import HTML, Text
 
           <%include file="index_promo_video.html" />
         </div>
-
       </header>
       <%include file="${courses_list}" />
-
+      <br />
+      <div class="home-overlay-wrapper">
+        <div class="home-overlay">
+          <div>
+            <h3>Not Sure Your Skill Level?</h3>
+            <br />
+            <p>Which one are you?</p>
+          </div>
+          <br />
+          <br />
+        </div>
+      </div>
+      <div class="course-descriptions">
+        <div class="description">
+            <div class="description-header">
+                <img src="/static/indigo/images/stars-beginner.png" />
+            </div>
+            <div class="description-content">
+                <h3 class="white">Am I a Beginner?</h3>
+                <br />
+                <p class="white">Understanding: Knows prompts are instructions for AI; sees how input shapes output.</p>
+                <br />
+                <p class="white">Skills: Writes simple, clear prompts (e.g., "List 5 fruits").</p>
+                <br />
+                <p class="white">Competency: Avoids vague wording; matches basic intent to results.</p>
+                <br />
+                <p class="white">Focus: Clarity and basic prompt structure.</p>
+            </div>
+          </div>
+          <div class="description">
+              <div class="description-header">
+                  <img src="/static/indigo/images/stars-intermediate.png" />
+              </div>
+              <div class="description-content">
+                  <h3 class="white">Am I Intermediate?</h3>
+                  <br />
+                  <p class="white">Understanding: Sees how phrasing and context affect AI responses.</p>
+                  <br />
+                  <p class="white">Skills: Crafts multi-step prompts (e.g., "Summarize this, then explain it simply").</p>
+                  <br />
+                  <p class="white">Competency: Adjusts prompts to fix poor outputs; handles creative tasks.</p>
+                  <br />
+                  <p class="white">Focus: Consistency and guiding AI with purpose.</p>
+              </div>
+          </div>
+          <div class="description">
+              <div class="description-header">
+                  <img src="/static/indigo/images/stars-advanced.png" />
+              </div>
+              <div class="description-content">
+                  <h3 class="white">Am I Advanced?</h3>
+                  <br />
+                  <p class="white">Understanding: Grasps AI limits and strengths; knows advanced techniques.</p>
+                  <br />
+                  <p class="white">Skills: Designs complex prompts (e.g., "Act as an expert, analyze X, create Y").</p>
+                  <br />
+                  <p class="white">Competency: Controls outputs precisely; solves multi-step problems.</p>
+                  <br />
+                  <p class="white">Focus: Precision, efficiency, and real-world applications.</p>
+              </div>
+          </div>
+      </div>
+      <br />
+      <br />
     </section>
 </main>
 
