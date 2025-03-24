@@ -341,3 +341,31 @@ p.white {
         }
     }
 }
+
+.register-btn-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+a.register-btn {
+    display: block;
+    border-radius: 6px;
+    background: $primary;
+    text-align: center;
+    padding: 9px 17px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #fff;
+    width: 150px;
+
+    &:hover {
+        text-decoration: none;
+        color: white;
+    }
+
+    &:visited {
+        text-decoration: none;
+        color: white;
+    }
+}
