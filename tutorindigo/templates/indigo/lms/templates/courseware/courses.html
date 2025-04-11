@@ -12,6 +12,40 @@
 <%namespace name='static' file='../static_content.html'/>
 <%block name="js_extra">
   <script type="text/javascript" src="${static.url('common/js/vendor/bootstrap.bundle.js')}"></script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      // Function to hide DemoX courses
+      function hideDemoXCourses() {
+        const courseItems = document.querySelectorAll('.courses-listing-item');
+        courseItems.forEach(function(node) {
+          const courseCodeSpan = node.querySelector('span.course-code');
+          if (courseCodeSpan && courseCodeSpan.textContent.trim() === 'DemoX') {
+            node.style.setProperty('display', 'none', 'important');
+          }
+        });
+      }
+
+      // Run the check immediately
+      hideDemoXCourses();
+      
+      // Target the courses list container
+      const coursesList = document.querySelector('.courses-listing');
+      
+      if (coursesList) {
+        // Create a new MutationObserver
+        const observer = new MutationObserver(function(mutations) {
+          // Instead of checking individual nodes, run the full check
+          hideDemoXCourses();
+        });
+
+        // Start observing the courses list for changes
+        observer.observe(coursesList, {
+          childList: true,    // Observe direct children
+          subtree: true       // Observe all descendants
+        });
+      }
+    });
+  </script>
 </%block>
 % if course_discovery_enabled:
 <%block name="header_extras">
