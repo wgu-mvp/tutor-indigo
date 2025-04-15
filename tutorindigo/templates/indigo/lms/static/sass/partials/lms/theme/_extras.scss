@@ -1525,6 +1525,11 @@ body.indigo-dark-theme {
   } 
 
 }
+
+.course-card-banners[data-testid="CourseCardBanners"] {
+  display: none !important;
+}
+
 @import '../../../extra/footer';
 @import '../../../extra/header';
 @import '../../../dashboard/dashboard';

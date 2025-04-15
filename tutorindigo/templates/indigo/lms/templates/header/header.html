@@ -42,6 +42,8 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
   </script>
 % endif
 
+
+
 <header class="global-header ${'slim' if course else ''}">
     <div class="header-container">
     % if settings.FEATURES.get('ENABLE_COOKIE_POLICY_BANNER', use_cookie_banner):
@@ -67,6 +69,9 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     </div>
     <div class="mobile-menu hidden" aria-label=${_("More Options")} role="menu" id="mobile-menu"></div>
     </div>
+    <script type="text/javascript" defer>
+        console.log("header.html");
+    </script>
 </header>
 
 % if course:

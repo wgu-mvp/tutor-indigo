@@ -260,6 +260,7 @@
         }
     }
     .course-sidebar {
+        display: none !important;
         background: $primary-light;
         padding: 24px;
         border-radius: 8px;
