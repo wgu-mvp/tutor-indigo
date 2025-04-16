@@ -19,7 +19,7 @@
         const courseItems = document.querySelectorAll('.courses-listing-item');
         courseItems.forEach(function(node) {
           const courseCodeSpan = node.querySelector('span.course-code');
-          if (courseCodeSpan && courseCodeSpan.textContent.trim() === 'DemoX') {
+          if (courseCodeSpan && (courseCodeSpan.textContent.trim() === 'DemoX' || courseCodeSpan.textContent.trim() === 'PE202')) {
             node.style.setProperty('display', 'none', 'important');
           }
         });
